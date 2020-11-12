@@ -1,0 +1,12 @@
+{% extends 'shop/detail_base.html' %}
+
+{% block price %}от {{ product.price_from }}{% endblock %}
+{% block sets %}
+	{% for set in product.sets.all %}
+		<a style="padding-right: 10px;" class="d-flex" href="{{ set.get_absolute_url }}">
+		  <div class="border d-flex align-items-center justify-content-between py-3 px-3 bg-white border-white">
+		    <span class="small text-uppercase text-gray">{{ set.size_set }}</span>
+		  </div>
+		</a>
+	{% endfor %}
+{% endblock %}
