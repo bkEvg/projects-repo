@@ -7,7 +7,7 @@ def send(email):
         'Here is the message.',
         settings.EMAIL_HOST_USER,
         [email],
-        fail_silently=False,
+        fail_silently=True,
     )
 
 
